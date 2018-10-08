@@ -1,0 +1,138 @@
+﻿# --- Type ---
+monarchy = no
+republic = no
+dictatorship = no
+religion = no
+monastic = no
+tribal = no
+papacy = no
+nomad = no
+
+# --- Ruler ---
+queen = no
+heir = no
+
+maintain_dynasty = no
+
+# --- Nation Designer ---
+nation_designer_trigger = { }
+nation_designer_cost = 0
+valid_for_nation_designer = yes
+
+# --- System Actions ---
+valid_for_new_country = yes
+allow_normal_conversion = yes
+allow_convert = yes
+fixed_rank = 0
+min_autonomy = 0
+start_territory_to_estates = 0.8
+
+# --- Republic ---
+republican_name = no
+duration = 0
+election_on_death = no
+has_term_election = no
+
+# --- Religion ---
+different_religion_acceptance = 0
+different_religion_group_acceptance = 0
+
+# --- Gamplay ---
+rulers_can_be_generals = yes
+heirs_can_be_generals = yes
+allow_force_tributary = yes
+royal_marriage = yes
+allow_vassal_war = no
+allow_vassal_alliance = no
+boost_income = no
+
+factions = { 
+    <factions>
+}
+
+#-------------------------
+# has_dlc = "Conquest of Paradise"
+#-------------------------
+native_mechanic = no
+allow_migration = no
+
+#-------------------------
+# has_dlc = "Res Publica"
+#-------------------------
+is_elective = no
+can_use_trade_post = yes
+
+states_general_mechanic = { 
+    <group> = {
+        <modifiers>
+    }
+    <group> = {
+        <modifiers>
+    }
+}
+
+#-------------------------
+# has_dlc = "The Cossacks"
+#-------------------------
+government_abilities = { 
+    cossacks_mechanic
+}
+
+#-------------------------
+# has_dlc = "Common Sense"
+#-------------------------
+free_city = no
+has_devotion = no
+has_parliament = no
+
+#-------------------------
+# has_dlc = "Rights of Man" 
+#-------------------------
+militarised_society = no
+
+#-------------------------
+# has_dlc = "Third Rome"
+#-------------------------
+claim_states = no
+
+government_abilities = { 
+    russian_mechanic
+}
+
+#-------------------------
+# has_dlc = "Mandate of Heaven"
+#-------------------------
+has_meritocracy = no
+
+#-------------------------
+# has_dlc = "Mare Nostrum"
+#-------------------------
+is_trading_city = no
+trade_city_reform = ""
+can_form_trade_league = no
+
+#-------------------------
+# has_dlc = "Cradle of Civilization"
+#-------------------------
+has_harem = no
+has_pashas = no
+foreign_slave_rulers = no
+
+government_abilities = { 
+    iqta_mechanic
+    feudal_theocracy_mechanic
+    mamluk_mechanic
+    tribal_federation_mechanic
+}
+
+#-------------------------
+# has_dlc = "Dharma"
+#-------------------------
+assimilation_cultures = { 
+    <culture group/culture> = {
+        <modifiers>
+    }
+}
+
+
+
