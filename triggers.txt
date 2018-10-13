@@ -182,7 +182,7 @@ absolutism = <int> / <scope>
 corruption = <float>                    
 yearly_corruption_increase = <float> / <scope>   
 
-government = <type>             # Government groups: monarchy, republic, theocracy, tribal, dictatorship
+government = <type>         # Checks: monarchy, republic, tribal, dictatorship
 government_rank = <int>             
 legitimacy = <int> / <scope>                    
 republican_tradition = <int> / <scope>          
