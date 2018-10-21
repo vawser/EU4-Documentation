@@ -442,7 +442,7 @@ num_of_mercenaries = <int> / <scope>
 num_of_banners = <int> / <scope>
 num_of_cossacks = <int> / <scope>
 num_of_streltsy = <int> / <scope>
-num_of_rajupt = <int> / <scope>
+num_of_rajput = <int> / <scope>
 janissary_percentage  = <float> 
 
 war_score = <int>
