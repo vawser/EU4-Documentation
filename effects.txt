@@ -536,7 +536,7 @@ inherit = <scope>
 release = <scope>
 release_all_subjects = <yes>
 vassalize = <scope>
-grant_independence = yes        # Grants independence for current scoep against their overlord
+grant_independence = yes        # Grants independence for current scope against their overlord
 
 declare_war = <scope>
 add_truce_with = <scope>            # Uses default truce length. Applies after one tick.

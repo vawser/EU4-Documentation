@@ -74,6 +74,7 @@ has_global_modifier_value = {
 
 active_major_mission = <mission>
 last_mission = <mission>
+mission_completed = <mission>
 
 has_custom_ideas = yes / no                 
 is_playing_custom_nation = yes / no                   
@@ -182,7 +183,7 @@ absolutism = <int> / <scope>
 corruption = <float>                    
 yearly_corruption_increase = <float> / <scope>   
 
-government = <type>         # Checks: monarchy, republic, tribal, dictatorship
+government = <type>             # Checks: monarchy, republic, tribal, dictatorship
 government_rank = <int>             
 legitimacy = <int> / <scope>                    
 republican_tradition = <int> / <scope>          
@@ -217,6 +218,12 @@ has_government_power = {
     type = <type>
     value = <amount>
 }
+
+# Attributes:
+# Legitimacy  - monarchy, republic, religion, tribal, dictatorship, nomad, papacy, has_meritocracy, has_devotion
+# Abilities   - militarised_society, has_parliament, allow_migration, claim_states, native_mechanic
+# Ruler       - heir, queen, has_term_election, election_on_death, is_elective
+# Other       - republican_name, valid_for_nation_designer, allow_normal_conversion
 
 has_government_attribute = <attribute>      
 has_states_general_mechanic = <bool>
