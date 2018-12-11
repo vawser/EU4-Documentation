@@ -469,6 +469,7 @@ has_leader_with = {
     shock = <int>
     manuever = <int>
     siege = <int>
+    total_pips = <int>
 }
 
 has_leaders = {
@@ -516,6 +517,7 @@ num_of_total_ports = <int> / <scope>
 num_ships_privateering = <int> / <scope>
 blockade = <float> / <scope>                 # Current blockade penalty
 has_privateers = yes / no
+has_flagship = <bool>
 
 # ----- Diplomacy -----
 cb_on_government_enemies = yes / no
@@ -730,6 +732,8 @@ is_former_colonial_nation = yes / no
 primitives = yes / no
 is_federation_leader = yes / no
 
+native_policy = <policy>
+
 # ----- Ruler -----
 ADM = <int> / <scope>
 DIP = <int> / <scope>
@@ -834,6 +838,7 @@ has_estate_loyalty_modifier = {
 
 # ----- Factions -----
 has_factions = yes / no
+has_faction = <faction>
 faction_in_power = <faction>
 faction_influence = {
     faction = <faction>
@@ -974,6 +979,7 @@ colonial_region = <colonial region>
 has_colonist = yes
 is_colony = yes / no
 
+colony = <int>
 range = <scope>
 colonysize = <int>
 native_ferocity = <int>
@@ -983,6 +989,11 @@ native_size = <int>
 colony_claim = <scope>
 colonial_claim_by_anyone_of_religion = <religion> / <scope>     # Treaty of Tortillas
 is_religion_grant_colonial_claim = yes / no / <scope>           # Treaty of Tortillas
+
+expelling_minorities_from = <scope>
+expelling_minorities = <bool>
+expelled_different_minorities = <int>
+recent_treasure_ship_passage = <bool>
 
 # ----- Construction -----
 can_build = <building>
@@ -1004,7 +1015,6 @@ has_seat_in_parliament = yes / no
 is_backing_current_issue = yes / no
 current_bribe = <string>
 
-
 culture = <scope> / <culture>
 culture_group = <scope> / <culture>
 has_owner_culture = yes
@@ -1019,6 +1029,13 @@ has_owner_religion = yes
 is_reformation_center = yes
 papacy_active = yes
 has_state_patriach = yes / no
+holy_order = <order>
+
+provincial_institution_progress = {
+    which = <institution>
+    value = <int>
+}
+
 
 # ----- Military -----
 fort_level = <int>

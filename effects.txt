@@ -340,6 +340,8 @@ define_ruler = {
     name = <string>             # optional, assigns fixed name
     dynasty = <string/scope>    # optional, assigns dynasty. For republics, changes surname. original_dynasty can be used to get country's starting dynasty
     age = <years>               # optional, sets age
+    min_age = <years>
+    max_age = <years>
     claim = <int>               # optional, sets starting legitimacy
     adm = <int>                 # optional, sets ADM minimum roll
     dip = <int>                 # optional, sets DIP minimum roll
@@ -591,11 +593,21 @@ add_sailors = <int>                 # 1 == 1
 add_yearly_manpower = <float>       # 0.1 == 10%
 add_yearly_sailors = <float>
 
-create_admiral = <int>          # <int> is the amount of Army Tradition the generation algorithm should use
 create_conquistador = <int>
 create_explorer = <int>
+
 create_general = <int>
 create_general = {
+    tradition = <int>
+    add_fire = <int>
+    add_shock = <int>
+    add_manuever = <int>
+    add_siege = <int>
+    culture = <string>
+}
+
+create_admiral = <int>
+create_admiral = {
     tradition = <int>
     add_fire = <int>
     add_shock = <int>
@@ -878,6 +890,8 @@ change_native_size = <int>
 discover_country = <scope>              # <scope> gains vision the current province scope. Use with areas, regions, etc
 undiscover_country = <scope>            # <scope> loses vision of the current province scope. Use with areas, regions, etc
 
+native_policy = <policy>
+
 # ----- Diplomacy -----
 # <scope> gains effect on current province scope 
 add_claim = <scope>                     
@@ -904,6 +918,17 @@ mercenary_cavalry = <scope>     # Is a mercenary unit
 cossack_cavalry = <scope>       
 streltsy_infantry = <scope>      
 rajput_infantry = <scope>       
+
+# Creates flagship
+create_flagship = {
+    name = <string>
+    type = <type>
+}
+# Creates ship with custom name
+create_named_ship = {
+    name = <string>
+    type = <type>
+}
 
 # Only works if leader is in province 
 kill_leader = <general/admiral/conquistador/explorer/random/name> # Name is a specific name, i.e. "John"

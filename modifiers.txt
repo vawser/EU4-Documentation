@@ -1,24 +1,42 @@
 #--------------------------------------------------------------------------------
 # Country
 #--------------------------------------------------------------------------------
+is_janissary_modifier = yes # If an event modifier has this it'll be removed if the country no longer has Janissaries
+is_rajput_modifier = yes
+
 #-----------------------------------------
 # Army
 #-----------------------------------------
 army_tradition = 1
 army_tradition_decay = -0.01
 army_tradition_from_battle = 0.5
+leader_cost = -0.1
+general_cost = -0.5
+free_leader_pool = 1
+leader_land_fire = 1
+leader_land_manuever = 1
+leader_land_shock = 1
+leader_siege = 1
 yearly_army_professionalism = 0.1
 drill_gain_modifier = 0.1
 drill_decay_modifier = -0.1
+
 infantry_cost = -0.1
 infantry_power = 0.1
+infantry_fire = 1
+infantry_shock = 1
 cavalry_cost = -0.5
 cavalry_power = 0.1
-cav_to_inf_ratio = 0.1
-cavalry_flanking = 0.5
+cavalry_fire = 1
+cavalry_shock = 1
 artillery_cost = -0.1
 artillery_power = 0.1
+artillery_fire = 1
+artillery_shock = 1
+
 artillery_bonus_vs_fort = 1
+cav_to_inf_ratio = 0.1
+cavalry_flanking = 0.5
 backrow_artillery_damage = 0.1
 discipline = 0.05
 mercenary_discipline = 0.05
@@ -37,6 +55,20 @@ land_attrition = -0.25
 reinforce_cost_modifier = -0.50
 reinforce_speed = 0.25
 manpower_recovery_speed = 0.25
+hostile_attrition = 1
+garrison_size = 0.25
+global_garrison_growth = 0.1
+fort_maintenance_modifier = -0.1
+rival_border_fort_maintenance = 0.1
+global_supply_limit_modifier = 0.1
+raze_power_gain = 0.2
+loot_amount = 0.1
+prestige_from_land = 0.5 
+amount_of_banners = 0.1
+war_taxes_cost_modifier = -0.1
+war_exhaustion = -0.1
+war_exhaustion_cost = -0.2
+
 global_manpower = 1.0
 global_manpower_modifier = 0.1
 global_regiment_cost = -0.10
@@ -48,28 +80,6 @@ mercenary_cost = -0.25
 merc_maintenance_modifier = -0.25
 possible_condottieri = 0.5 
 possible_mercenaries = 1.0
-hostile_attrition = 1
-garrison_size = 0.25
-global_garrison_growth = 0.1
-fort_maintenance_modifier = -0.1
-rival_border_fort_maintenance = 0.1
-war_exhaustion = -0.1
-war_exhaustion_cost = -0.2
-leader_land_fire = 1
-leader_land_manuever = 1
-leader_land_shock = 1
-leader_siege = 1
-general_cost = -0.5
-free_leader_pool = 1
-raze_power_gain = 0.2
-loot_amount = 0.1
-prestige_from_land = 0.5 
-amount_of_banners = 0.1
-war_taxes_cost_modifier = -0.1
-leader_cost = -0.1
-
-is_janissary_modifier = yes # If an event modifier has this it'll be removed if the country no longer has Janissaries
-is_rajput_modifier = yes
 
 #-----------------------------------------
 # Navy
@@ -77,7 +87,14 @@ is_rajput_modifier = yes
 # ----- Navy Tradition -----
 navy_tradition = 1
 navy_tradition_decay = -0.01
+naval_tradition_from_trade = 0.1
 naval_tradition_from_battle = 0.5
+admiral_cost = -0.1
+admiral_skill_gain_modifier = 0.1
+leader_naval_fire = 1
+leader_naval_manuever = 1
+leader_naval_shock = 1
+
 heavy_ship_cost = -0.25
 heavy_ship_power = 0.1
 light_ship_cost = -0.25
@@ -89,13 +106,16 @@ transport_power = 0.1
 global_ship_cost = -0.1
 global_ship_recruit_speed = -0.1
 global_ship_repair = 0.2
+
 naval_forcelimit = 1
 naval_forcelimit_modifier = 0.25
 naval_maintenance_modifier = -0.25
+
 global_sailors = 1000
 global_sailors_modifier = 0.25
 sailor_maintenance_modifer = 0.2
 sailors_recovery_speed = 0.1
+
 blockade_efficiency = 0.5
 capture_ship_chance = 0.2
 global_naval_engagement_modifier = 0.5
@@ -105,10 +125,27 @@ ship_durability = 0.1
 sunk_ship_morale_hit_recieved = -0.2
 recover_navy_morale_speed = 0.05
 prestige_from_naval = 0.5
-leader_naval_fire = 1
-leader_naval_manuever = 1
-leader_naval_shock = 1
 own_coast_naval_combat_bonus = 1.0
+movement_speed_onto_off_boat_modifier = -0.33
+global_naval_barrage_cost = -0.1
+
+flagship_durability = 1
+flagship_morale = 1
+flagship_naval_engagement_modifier = 1
+flagship_landing_penalty = 2
+number_of_cannons_flagship_modifier = 0.1
+naval_maintenance_flagship_modifier = 0.1
+trade_power_in_fleet_modifier = 1
+morale_in_fleet_modifier = 0.1
+blockade_impact_on_siege_in_fleet_modifier = 0.1
+exploration_mission_range_in_fleet_modifier = 100
+barrage_cost_in_fleet_modifier = 0.1
+naval_attrition_in_fleet_modifier = 0.1
+privateering_efficiency_in_fleet_modifier = 0.1
+prestige_from_battles_in_fleet_modifier = 0.1
+naval_tradition_in_fleet_modifier = 0.1
+cannons_for_hunting_pirates_in_fleet = 1
+movement_speed_in_fleet_modifier = 0.1
 
 #-----------------------------------------
 # Diplomacy
@@ -212,7 +249,6 @@ candidate_random_bonus = 1
 reelection_cost = -0.1
 reform_progress_growth = 0.1
 
-
 #-----------------------------------------
 # Culture
 #-----------------------------------------
@@ -257,6 +293,7 @@ secondary_religion = yes    # If an event modifier has this it'll be removed if 
 
 global_missionary_strength = 0.02
 global_heretic_missionary_strength = 0.03
+missionary_maintenance_cost = -0.1
 missionaries = 1
 religious_unity = 0.5
 tolerance_heathen = 1
@@ -272,6 +309,7 @@ monthly_karma = 0.1
 enforce_religion_cost = 0.1
 prestige_per_development_from_conversion = 0.1
 warscore_cost_vs_other_religion = 10
+establish_order_cost = 0.1
 
 #-----------------------------------------
 # Colonisation
@@ -284,6 +322,8 @@ native_uprising_chance = -0.25
 native_assimilation = 0.25
 migration_cooldown = -0.1
 global_tariffs = 0.25
+treasure_fleet_income = 0.5
+expel_minorities_cost = -0.3
 
 #-----------------------------------------
 # Trade
@@ -303,10 +343,13 @@ global_ship_trade_power = 0.2
 privateer_efficiency = 0.25
 embargo_efficiency = 0.25
 ship_power_propagation = 0.1
+center_of_trade_upgrade_cost = -0.2
+trade_company_investment_cost = -0.2
 
 #-----------------------------------------
 # Rules
 #-----------------------------------------
+has_banners = 1
 
 # ----- Ages -----
 attack_bonus_in_capital_terrain = yes  
@@ -333,9 +376,8 @@ sea_repair = yes
 may_establish_frontier = yes
 extra_manpower_at_religious_war = yes
 auto_explore_adjacent_to_colony = yes
-
-# ----- Other -----
-has_banners = 1
+can_fabricate_for_vassals = yes
+may_perform_slave_raid_on_same_religion = yes
 
 #--------------------------------------------------------------------------------
 # Province
@@ -414,6 +456,7 @@ trade_value_modifier = 0.25
 local_missionary_strength = 0.001
 religious_conversion_resistance = 0.1
 local_religious_unity_contribution = 0.1
+local_missionary_maintenance_cost = -0.1
 
 #-----------------------------------------
 # Culture

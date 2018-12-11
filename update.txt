@@ -1,0 +1,76 @@
+﻿# Effect
+# Country
+native_policy = <policy>
+
+# Province
+create_flagship = {
+    name = <string>
+    type = <ship type>
+}
+create_named_ship = {
+    name = <string>
+    type = <ship type>
+}
+
+# Triggers
+# Country
+has_flagship = <bool>
+native_policy = <policy>
+has_faction = <faction>
+
+# Province
+provincial_institution_progress = {
+    which = <institution>
+    value = <int>
+}
+expelling_minorities_from = <scope>
+holy_order = <order>
+recent_treasure_ship_passage = <bool>
+expelling_minorities = <bool>
+expelled_different_minorities = <int>
+
+# Modifiers
+# Country
+flagship_durability = <float>
+number_of_cannons_flagship_modifier = <float>
+flagship_morale = <float>
+treasure_fleet_income = <float>
+naval_maintenance_flagship_modifier = <float>
+trade_power_in_fleet_modifier = <float>
+morale_in_fleet_modifier = <float>
+flagship_naval_engagement_modifier = <int>
+blockade_impact_on_siege_in_fleet_modifier = <float>
+exploration_mission_range_in_fleet_modifier = <float>
+barrage_cost_in_fleet_modifier = <float>
+naval_attrition_in_fleet_modifier = <float>
+cannons_for_hunting_pirates_in_fleet = <int>
+movement_speed_onto_off_boat_modifier = <float>
+flagship_landing_penalty = <float>
+admiral_skill_gain_modifier = <float>
+privateering_efficiency_in_fleet_modifier = <float>
+prestige_from_battles_in_fleet_modifier = <float>
+naval_tradition_in_fleet_modifier = <float>
+movement_speed_in_fleet_modifier = <float>
+global_naval_barrage_cost = <float>
+missionary_maintenance_cost = <float>
+
+expel_minorities_cost = <float>
+naval_tradition_from_trade = <float>
+admiral_cost = <float>
+global_supply_limit_modifier = <float>
+center_of_trade_upgrade_cost = <float>
+establish_order_cost = <float>
+trade_company_investment_cost = <float>
+
+infantry_fire = <int>
+infantry_shock = <int>
+cavalry_fire = <int>
+cavalry_shock = <int>
+artillery_fire = <int>
+artillery_shock = <int>
+
+can_fabricate_for_vassals = yes
+may_perform_slave_raid_on_same_religion = yes
+
+# Province
+local_missionary_maintenance_cost = <float>
